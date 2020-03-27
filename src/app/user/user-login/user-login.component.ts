@@ -17,20 +17,4 @@ export class UserLoginComponent implements OnInit {
       pass: ['', [Validators.required]],
     })
   }
-  submit() {
-    console.log(this.loginGroup.value);
-    let userString = localStorage.getItem(this.loginGroup.value.username);
-    if (userString != null) {
-      let userobj = JSON.parse(userString);
-      if (userobj.username === this.loginGroup.value.username && userobj.pass === this.loginGroup.value.pass) {
-        sessionStorage.setItem('user', userobj.username);
-        this.router.navigate(['/userhome']);
-      } else {
-        this.error = true;
-      } 
-    }else {
-        this.error = true;
-
-      } 
-  }
   }

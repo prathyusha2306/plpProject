@@ -8,13 +8,15 @@ import { UserHomeComponent } from './user/user-home/user-home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {Router } from '@angular/router';
 import { UserLoginComponent } from './user/user-login/user-login.component';
+import { ATMSimulatorComponent } from './user/atmsimulator/atmsimulator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     UserHomeComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    ATMSimulatorComponent
   ],
   imports: [
     BrowserModule,
